@@ -1,0 +1,41 @@
+<div class="container-fluid">
+  <header>
+    <h1>Création d'un membre de l'asso</h1>
+  </header>
+
+  <form [formGroup]="form" (submit)="createMember(form.value)">
+    <div class="form-group col-sm-6 mb-3">
+      <label for="dci">Numéro DCI</label>
+      <input type="text" id="dci" class="form-control" placeholder="Numéro DCI du membre" formControlName="dci"/>
+      <p class="text-danger" *ngIf="controlDci(); let message">{{ message }}</p>
+    </div>
+
+    <div class="form-group col-sm-6 mb-3">
+      <label for="name">Nom</label>
+      <input type="text" id="name" class="form-control" placeholder="Nom" formControlName="name"/>
+      <p class="text-danger" *ngIf="controlName(); let message">{{ message }}</p>
+    </div>
+
+    <div class="form-group col-sm-6  mb-3">
+      <label for="firstname">Prénom</label>
+      <input type="text" id="firstName" class="form-control" placeholder="Prénom" formControlName="firstName"/>
+      <p class="text-danger" *ngIf="controlFirstname(); let message">{{ message }}</p>
+    </div>
+
+    <div class="form-group col-sm-6  mb-3">
+      <label for="email">EMail</label>
+      <input type="text" id="email" class="form-control" placeholder="EMail" formControlName="email"/>
+      <p class="text-danger" *ngIf="controlEmail(); let message">{{ message }}</p>
+    </div>
+
+    <div class="form-group col-sm-6  mb-3">
+      <label for="login">Login</label>
+      <input type="text" id="login" class="form-control" placeholder="Login" formControlName="login"/>
+      <p class="text-danger" *ngIf="controlLogin(); let message">{{ message }}</p>
+    </div>
+
+    <div class="form-group col-sm-12">
+      <button class="btn btn-outline-primary">Créer le membre</button>
+    </div>
+  </form>
+</div>
