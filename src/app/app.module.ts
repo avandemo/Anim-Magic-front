@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './components/home/home.component';
+import { FormatTypeComponent } from './components/format-type/format-type.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    MemberComponent
+    MemberComponent,
+    FormatTypeComponent
   ],
   imports: [
     BrowserModule,

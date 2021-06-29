@@ -15,12 +15,12 @@ export class MemberService {
   constructor(private http: HttpClient) { }
 
   getMembers() {
-    return this.http.get(this.BASE_URL + '/members')
+    return this.http.get(this.BASE_URL + 'members')
                     .pipe(map(res => res));
   }
 
   getMembersByDci(dci) {
-    return this.http.get(this.BASE_URL + `/members/${dci}`)
+    return this.http.get(this.BASE_URL + `members/${dci}`)
                     .pipe(map(res => res));
   }
 
@@ -33,7 +33,7 @@ export class MemberService {
   }
 
   updateMember(memberData) {
-    return this.http.put(this.BASE_URL + '/members', memberData)
+    return this.http.put(this.BASE_URL + 'members', memberData)
                     .pipe(map(res => {
                       console.log(res);
                       this.membersSubject.next(memberData);
